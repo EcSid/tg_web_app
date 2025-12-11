@@ -2,8 +2,11 @@ import type { FC } from 'react'
 import VirtualizedList from '../VirtualizedList/VirtualizedList'
 import PersonIcon from '@mui/icons-material/Person'
 import './UserProfile.css'
+import useTelegram from '../../hooks/useTelegram'
 
 const UserProfile: FC = () => {
+	const { user } = useTelegram()
+
 	return (
 		<div className='Wrapper'>
 			<div className='Content'>
@@ -13,7 +16,7 @@ const UserProfile: FC = () => {
 						sx={{ fontSize: 40, color: 'var(--tg-theme-text-color)' }}
 					/>
 					{/* Максимум 26 */}
-					<div className='UserProfileName'>В маске страшный монстр</div>
+					<div className='UserProfileName'>{user?.username}</div>
 				</div>
 				<div className='Section'>
 					<div className='Text'>Твои любимые фильмы</div>
