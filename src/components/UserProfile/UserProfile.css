@@ -30,7 +30,7 @@
 	margin-bottom: 10px;
 	font-size: 19px;
 	font-weight: bold;
-	color: whitesmoke;
+	color: var(--tg-theme-button-text-color);
 	font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 

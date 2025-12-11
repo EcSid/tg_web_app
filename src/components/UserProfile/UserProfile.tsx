@@ -5,8 +5,7 @@ import './UserProfile.css'
 import useTelegram from '../../hooks/useTelegram'
 
 const UserProfile: FC = () => {
-	const { user, tg } = useTelegram()
-	console.log(tg.themeParams)
+	const { user } = useTelegram()
 
 	return (
 		<div className='Wrapper'>
