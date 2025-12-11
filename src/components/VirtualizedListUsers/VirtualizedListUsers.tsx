@@ -1,0 +1,60 @@
+import List from '@mui/material/List'
+import ListItem from '@mui/material/ListItem'
+import ListItemButton from '@mui/material/ListItemButton'
+import ListItemText from '@mui/material/ListItemText'
+import ListItemAvatar from '@mui/material/ListItemAvatar'
+import Avatar from '@mui/material/Avatar'
+import { Button, IconButton } from '@mui/material'
+import MessageIcon from '@mui/icons-material/Message'
+
+const VurtualizedListUsers = () => {
+	// const [checked, setChecked] = React.useState([1])
+
+	// const handleToggle = (value: number) => () => {
+	// 	const currentIndex = checked.indexOf(value)
+	// 	const newChecked = [...checked]
+
+	// 	if (currentIndex === -1) {
+	// 		newChecked.push(value)
+	// 	} else {
+	// 		newChecked.splice(currentIndex, 1)
+	// 	}
+
+	// 	setChecked(newChecked)
+	// }
+
+	return (
+		<List
+			dense
+			sx={{
+				width: '100%',
+				maxWidth: 360,
+				bgcolor: 'background.paper',
+				marginTop: '18px',
+			}}
+		>
+			{[0, 1, 2, 3].map(value => {
+				return (
+					<ListItem
+						key={value}
+						secondaryAction={
+							<IconButton>
+								<MessageIcon sx={{ color: 'grey' }} />
+							</IconButton>
+						}
+						disablePadding
+					>
+						<ListItemButton>
+							<ListItemAvatar>
+								<Avatar />
+							</ListItemAvatar>
+							<ListItemText primary={`Фанат Мика Томпсона`} />
+						</ListItemButton>
+					</ListItem>
+				)
+			})}
+		</List>
+	)
+}
+
+export default VurtualizedListUsers
