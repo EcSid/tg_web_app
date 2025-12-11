@@ -22,10 +22,10 @@ function App() {
 						},
 						'& .Mui-selected': {
 							'& .MuiBottomNavigationAction-label': {
-								color: 'var(--tg-theme-section-bg-color)',
+								color: 'var(--tg-theme-button-color)',
 							},
 							'& .MuiSvgIcon-root': {
-								color: 'var(--tg-theme-section-bg-color)',
+								color: 'var(--tg-theme-button-color)',
 							},
 						},
 					}}
