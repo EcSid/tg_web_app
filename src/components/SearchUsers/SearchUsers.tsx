@@ -8,7 +8,14 @@ const SearchUsers: FC = () => {
 	return (
 		<div className='Wrapper'>
 			<div className='Content'>
-				<Button variant='contained' startIcon={<SearchIcon />}>
+				<Button
+					variant='contained'
+					startIcon={<SearchIcon />}
+					sx={{
+						backgroundColor: 'var(--tg-theme-button-color)',
+						color: 'var(--tg-theme-button-text-color)',
+					}}
+				>
 					Найти людей с похожим вкусом
 				</Button>
 				<VurtualizedListUsers />

@@ -8,7 +8,10 @@ const UserProfile: FC = () => {
 		<div className='Wrapper'>
 			<div className='Content'>
 				<div className='UserProfile'>
-					<PersonIcon fontSize='inherit' sx={{ fontSize: 40 }} />
+					<PersonIcon
+						fontSize='inherit'
+						sx={{ fontSize: 40, color: 'var(--tg-theme-text-color)' }}
+					/>
 					{/* Максимум 26 */}
 					<div className='UserProfileName'>В маске страшный монстр</div>
 				</div>

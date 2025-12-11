@@ -7,14 +7,33 @@ import PersonSearchIcon from '@mui/icons-material/PersonSearch'
 import UserProfile from './components/UserProfile/UserProfile'
 import SearchUsers from './components/SearchUsers/SearchUsers'
 
+const tg = window.Telegram.WebApp
 function App() {
 	const [value, setValue] = React.useState(0)
 
+	React.useEffect(() => {
+		tg.ready()
+	}, [])
+	
 	return (
 		<>
 			{/* Navigation */}
 			<Box sx={{ width: '100%' }}>
 				<BottomNavigation
+					sx={{
+						bgcolor: 'var(--tg-theme-bg-color)',
+						'& .MuiBottomNavigationAction-root': {
+							color: 'grey.600',
+						},
+						'& .Mui-selected': {
+							'& .MuiBottomNavigationAction-label': {
+								color: 'var(--tg-theme-section-bg-color)',
+							},
+							'& .MuiSvgIcon-root': {
+								color: 'var(--tg-theme-section-bg-color)',
+							},
+						},
+					}}
 					showLabels
 					value={value}
 					onChange={(_, newValue) => {

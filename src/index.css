@@ -6,4 +6,5 @@
 
 html {
 	padding: 0 10px 10px 10px;
+	background-color: var(--tg-theme-bg-color);
 }

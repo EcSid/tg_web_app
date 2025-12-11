@@ -29,8 +29,18 @@ const VurtualizedListUsers = () => {
 			sx={{
 				width: '100%',
 				maxWidth: 360,
-				bgcolor: 'background.paper',
+				bgcolor: 'var(--tg-theme-bg-color)',
 				marginTop: '18px',
+				color: 'var(--tg-theme-text-color)',
+				'& .MuiListItemButton-root': {
+					color: 'inherit',
+				},
+				'& .MuiListItemText-primary': {
+					color: 'inherit',
+				},
+				'& .MuiAvatar-root': {
+					bgcolor: 'grey.800',
+				},
 			}}
 		>
 			{[0, 1, 2, 3].map(value => {
